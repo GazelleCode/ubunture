@@ -121,7 +121,9 @@ const translations = {
     "about.stat_1_num": "950",
     "about.stat_1_desc": "Poaching cases",
     "about.stat_2_num": "230",
-    "about.stat_2_desc": "Volunteers worldwide"
+    "about.stat_2_desc": "Volunteers worldwide",
+    "coming_soon.title": "Coming Soon...",
+    "coming_soon.text": "This page is under construction."
   },
   
 // 日本語
@@ -186,7 +188,7 @@ const translations = {
     "footer.comp_review": "応援メッセージ",
     "footer.comp_insights": "理念",
     "footer.comp_carrier": "メンバー",
-    "footer.contact": "ubunture.tokyo@gmail.com",
+    "footer.contact": "お問い合わせ",
     "footer.privacy": "プライバシーポリシー",
     "team.title": "メンバー紹介",
     "team.supporters_title": "サポーター",
@@ -249,7 +251,9 @@ const translations = {
     "about.stat_1_num": "950",
     "about.stat_1_desc": "密猟事件",
     "about.stat_2_num": "230",
-    "about.stat_2_desc": "世界中のボランティア"
+    "about.stat_2_desc": "世界中のボランティア",
+    "coming_soon.title": "近日公開...",
+    "coming_soon.text": "このページは現在準備中です。"
   }
   // (例) 将来フランス語を足す場合、ここに追加するだけでOK
   // fr: {

@@ -21,11 +21,11 @@ const headerHTML = `
                                             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
                                             <li><a href="about.html" data-i18n="nav.about">About</a></li>
                                             <li><a href="what-do.html" data-i18n="nav.what_do">What we Do</a></li>
-                                            <li><a href="blog.html" data-i18n="nav.blog">Blog</a>
+                                            <li><a href="coming-soon.html" data-i18n="nav.blog">Blog</a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
-                                                    <li><a href="blog_details.html" data-i18n="nav.blog_details">Blog Details</a></li>
-                                                    <li><a href="elements.html" data-i18n="nav.elements">Element</a></li>
+                                                    <li><a href="coming-soon.html" data-i18n="nav.blog">Blog</a></li>
+                                                    <li><a href="coming-soon.html" data-i18n="nav.blog_details">Blog Details</a></li>
+                                                    <li><a href="coming-soon.html" data-i18n="nav.elements">Element</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
