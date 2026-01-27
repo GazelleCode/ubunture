@@ -31,12 +31,12 @@
     });
 
     // ボタンの文字更新（次の言語を表示する）
-    const btn = document.getElementById('lang-btn');
-    if (btn) {
+    const btns = document.querySelectorAll('.lang-switch-btn');
+    btns.forEach(btn => {
       // 現在が日本語なら、ボタンには英語(EN)への切替を表示させたい場合など
       // translations.js で設定した nextLangBtn を使う
       btn.innerText = translations[lang].nextLangBtn || "Lang";
-    }
+    });
 
     // 設定を保存
     localStorage.setItem('preferredLanguage', lang);

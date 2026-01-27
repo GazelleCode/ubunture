@@ -16,7 +16,7 @@ const headerHTML = `
                                     <nav>
                                         <ul id="navigation">                                                                                          
                                             <li>
-                                                <button id="lang-btn" onclick="toggleLanguage()" class="btn" style="padding: 10px 20px; min-width: 60px; height: auto; line-height: 1; margin-left: 10px;">JP</button>
+                                                <button id="lang-btn" onclick="toggleLanguage()" class="btn lang-switch-btn" style="padding: 10px 20px; min-width: 60px; height: auto; line-height: 1; margin-left: 10px;">JP</button>
                                             </li>
                                             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
                                             <li><a href="about.html" data-i18n="nav.about">About</a></li>
