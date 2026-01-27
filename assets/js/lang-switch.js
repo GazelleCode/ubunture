@@ -46,12 +46,18 @@
   }
 
   // 4. 初期化（ページ読み込み時）
-  document.addEventListener('DOMContentLoaded', () => {
+  const init = () => {
     const savedLang = localStorage.getItem('preferredLanguage');
     // 保存された言語があればそれ、なければブラウザの言語、それもなければ英語
     const browserLang = (navigator.language || navigator.userLanguage).slice(0, 2);
     const defaultLang = savedLang || (availableLangs.includes(browserLang) ? browserLang : 'en');
     
     changeLanguage(defaultLang);
-  });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
