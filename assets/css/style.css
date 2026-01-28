@@ -81,3 +81,8 @@
     border-bottom: none;
     backdrop-filter: none;
 }
+
+/* 白背景ヘッダー（PCスクロール時） */
+.picture-margin-bottom {
+    margin-bottom: 10px;
+}
