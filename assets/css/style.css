@@ -51,3 +51,25 @@
         text-align: center;
     }
 }
+
+/* ヘッダーのすりガラス（透明・屈折）効果 */
+.header-glass .main-header {
+    background: rgba(255, 255, 255, 0.1); /* 半透明の白 */
+    backdrop-filter: blur(10px);          /* すりガラス効果（屈折） */
+    -webkit-backdrop-filter: blur(10px);  /* Safari用 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 境界線 */
+    box-shadow: none;
+}
+
+/* ガラス効果時のメニュー文字色を白にする */
+.header-glass .main-menu ul li a {
+    color: #fff !important;
+}
+.header-glass .header-btn {
+    color: #fff !important;
+    border-color: #fff !important;
+}
+/* ロゴの色反転（必要であれば有効化してください） */
+/* .header-glass .logo img {
+    filter: brightness(0) invert(1);
+} */

@@ -13,11 +13,15 @@
 /* 2. sticky And Scroll UP */
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
-      if (scroll < 400) {
-        $(".header-sticky").removeClass("sticky-bar");
+      if (scroll < 100) {
+        // 最上部：ガラス効果で表示
+        $("#common-header").addClass("header-glass");
+        $("#common-header").css("transform", "translateY(0)");
         $('#back-top').fadeOut(500);
       } else {
-        $(".header-sticky").addClass("sticky-bar");
+        // スクロール後：ガラス効果を消して隠す
+        $("#common-header").removeClass("header-glass");
+        $("#common-header").css("transform", "translateY(-100%)");
         $('#back-top').fadeIn(500);
       }
     });
@@ -48,43 +52,26 @@
         }
       });
 
-      // スマートフォンでメニューを固定し、セクションのpaddingを調整
+      // ヘッダーを画面上部に固定し、コンテンツに重ねる設定
       function adjustSectionPadding() {
-        if ($(window).width() <= 767) {
-          var menuHeight = $('.mobile_menu').outerHeight();
-          // メニュー高さの分だけpadding-topを追加
-          $('#common-header').css('position', 'fixed');
-          $('#common-header').css('top', '0');
-          $('#common-header').css('width', '100%');
-          $('#common-header').css('z-index', '999');
-          $('main').css('margin-top', menuHeight + 'px');
-          $('.slider-area').css('margin-top', menuHeight + 'px');
-        } else {
-          $('#common-header').css('position', 'relative');
-          $('#common-header').css('top', 'auto');
-          $('#common-header').css('width', 'auto');
-          $('#common-header').css('z-index', 'auto');
-          $('main').css('margin-top', '0');
-          $('.slider-area').css('margin-top', '0');
-        }
+        $('#common-header').css({
+            'position': 'fixed',
+            'top': '0',
+            'width': '100%',
+            'z-index': '9999',
+            'transition': 'transform 0.3s ease-out, background 0.3s ease-out'
+        });
+        $('main').css('margin-top', '0');
+        $('.slider-area').css('margin-top', '0');
       }
 
       // 初期化時と画面リサイズ時に実行
       adjustSectionPadding();
       $(window).on('resize', adjustSectionPadding);
 
-      // スマートフォンで上スクロール時にメニューを閉じる
-      var lastScrollTop = 0;
+      // スクロールしたらハンバーガーメニューを閉じる
       $(window).on('scroll', function() {
-        var currentScroll = $(this).scrollTop();
-        // モバイル（767px以下）のみ適用
-        if ($(window).width() <= 767) {
-          // 上スクロール時（スクロール位置が減少）
-          if (currentScroll < lastScrollTop) {
-            menu.slicknav('close');
-          }
-          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }
+        menu.slicknav('close');
       });
     };
 
