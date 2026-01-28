@@ -147,14 +147,29 @@
     right: 0px;
     width: 100%;
     z-index: 99;
+    @media #{$xs}{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
     .slicknav_menu {
         background: transparent;
         margin-top: 0px !important;
+        @media #{$xs}{
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
         .slicknav_btn {
             top: -39px;
             // mobile Menu button color
             .slicknav_icon-bar {
                 background-color: $theme-color !important;
+            }
+            @media #{$xs}{
+                top: 15px;
+                right: 15px;
             }
         }
         .slicknav_nav{

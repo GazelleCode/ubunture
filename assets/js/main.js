@@ -47,6 +47,45 @@
           menu.slicknav('close');
         }
       });
+
+      // スマートフォンでメニューを固定し、セクションのpaddingを調整
+      function adjustSectionPadding() {
+        if ($(window).width() <= 767) {
+          var menuHeight = $('.mobile_menu').outerHeight();
+          // メニュー高さの分だけpadding-topを追加
+          $('#common-header').css('position', 'fixed');
+          $('#common-header').css('top', '0');
+          $('#common-header').css('width', '100%');
+          $('#common-header').css('z-index', '999');
+          $('main').css('margin-top', menuHeight + 'px');
+          $('.slider-area').css('margin-top', menuHeight + 'px');
+        } else {
+          $('#common-header').css('position', 'relative');
+          $('#common-header').css('top', 'auto');
+          $('#common-header').css('width', 'auto');
+          $('#common-header').css('z-index', 'auto');
+          $('main').css('margin-top', '0');
+          $('.slider-area').css('margin-top', '0');
+        }
+      }
+
+      // 初期化時と画面リサイズ時に実行
+      adjustSectionPadding();
+      $(window).on('resize', adjustSectionPadding);
+
+      // スマートフォンで上スクロール時にメニューを閉じる
+      var lastScrollTop = 0;
+      $(window).on('scroll', function() {
+        var currentScroll = $(this).scrollTop();
+        // モバイル（767px以下）のみ適用
+        if ($(window).width() <= 767) {
+          // 上スクロール時（スクロール位置が減少）
+          if (currentScroll < lastScrollTop) {
+            menu.slicknav('close');
+          }
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }
+      });
     };
 
 
