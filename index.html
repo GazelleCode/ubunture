@@ -39,9 +39,11 @@
                 display: inline-block !important;
             }
             /* モバイル向け全画面スクロール設定 */
-            html {
+            html, body {
                 scroll-snap-type: y proximity;
                 scroll-behavior: smooth;
+                margin: 0;
+                padding: 0;
             }
             /* 主要セクションのスナップ設定（最上位要素のみ） */
             .slider-area, 
@@ -52,8 +54,15 @@
             footer {
                 scroll-snap-align: start;
             }
-            /* スライダーのみ100vh強制 */
-            .slider-area, .slider-height {
+            /* スライダーは確実に100vh */
+            .slider-area {
+                height: 100vh !important;
+                min-height: 100vh !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .slider-height {
+                height: 100vh !important;
                 min-height: 100vh !important;
             }
         }

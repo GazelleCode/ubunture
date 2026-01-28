@@ -1,21 +1,9 @@
 // Main Slider Height
 .slider-height {
-    min-height: 790px;
+    height: 100vh;
     background-repeat:no-repeat ;
     background-position: center center;
     background-size: cover;
-    @media #{$lg}{
-        min-height: 680px;
-    }
-    @media #{$md}{
-        min-height: 600px;
-    }
-    @media #{$sm}{
-        min-height: 600px;
-    }
-    @media #{$xs}{
-        min-height:450px;
-    }
 }
 // Another Page
 .slider-height2{
@@ -45,10 +33,12 @@
 }
 
 .slider-area{
-
+    margin: 0 !important;
+    padding: 0 !important;
+    
     .hero__caption{
         @media #{$xs}{
-            margin-top: -76px;
+            margin-top: 0;
         }
         h1{
             font-size: 115px;
