@@ -13,15 +13,34 @@
 /* 2. sticky And Scroll UP */
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
-      if (scroll < 100) {
-        // 最上部：ガラス効果で表示
-        $("#common-header").addClass("header-glass");
+      var width = $(window).width();
+
+      if (width >= 992) {
+        // PC版: 常に表示
         $("#common-header").css("transform", "translateY(0)");
+        
+        if (scroll < 100) {
+          // 最上部: ガラス効果
+          $("#common-header").addClass("header-glass").removeClass("header-white");
+        } else {
+          // スクロール後: 白背景
+          $("#common-header").removeClass("header-glass").addClass("header-white");
+        }
+      } else {
+        // スマホ版: スクロールで隠す
+        if (scroll < 100) {
+          $("#common-header").addClass("header-glass").removeClass("header-white");
+          $("#common-header").css("transform", "translateY(0)");
+        } else {
+          $("#common-header").removeClass("header-glass").removeClass("header-white");
+          $("#common-header").css("transform", "translateY(-100%)");
+        }
+      }
+
+      // Back to top ボタン
+      if (scroll < 400) {
         $('#back-top').fadeOut(500);
       } else {
-        // スクロール後：ガラス効果を消して隠す
-        $("#common-header").removeClass("header-glass");
-        $("#common-header").css("transform", "translateY(-100%)");
         $('#back-top').fadeIn(500);
       }
     });

@@ -73,3 +73,11 @@
 /* .header-glass .logo img {
     filter: brightness(0) invert(1);
 } */
+
+/* 白背景ヘッダー（PCスクロール時） */
+.header-white .main-header {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-bottom: none;
+    backdrop-filter: none;
+}
