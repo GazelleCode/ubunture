@@ -24,6 +24,18 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* モーダルウィンドウのスタイル */
+        .white-popup-block {
+            background: #FFF;
+            padding: 40px;
+            text-align: left;
+            max-width: 650px;
+            margin: 40px auto;
+            position: relative;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -62,6 +74,33 @@
             </div>
         </div>
         <!-- Hero End -->
+        <!--? About Area Start -->
+        <section class="support-company-area fix pt-10">
+            <div class="support-wrapper align-items-center">
+                <div class="left-content">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-30">
+                        <span data-i18n="what-do.small_title">Why You Should join us</span>
+                        <h2 data-i18n="what-do.title">middle.title</h2>
+                    </div>
+                    <div class="support-caption">
+                        <p class="pera-top" data-i18n="what-do.text1">middle.text1</p>
+                        <p class="pera-top" data-i18n="what-do.text2">middle.text2</p>
+                        <p class="pera-top" data-i18n="what-do.text3">middle.text3</p>
+                        <a href="/about.html" class="border-btn" data-i18n="what-do.btn">Join Us Now</a>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="assets/img/gallery/visit_bg.png" alt="">
+                        <img src="assets/img/gallery/story4.png" alt="">
+                        <img src="assets/img/gallery/story7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
         <!--? Services Area Start -->
         <div class="service-area section-padding30">
             <div class="container">
@@ -72,7 +111,7 @@
                                 <img src="assets/img/gallery/unplugged_education.png" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="#" data-i18n="services.clean_water">Clean Water</a></h5>
+                                <h5><a href="#modal-unplugged" class="popup-modal" data-i18n="services.clean_water">Clean Water</a></h5>
                             </div>
                         </div>
                     </div>
@@ -82,7 +121,7 @@
                                 <img src="assets/img/gallery/teacher-training.png" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="#" data-i18n="services.renewable_energy">Renewable energy</a></h5>
+                                <h5><a href="#modal-teacher" class="popup-modal" data-i18n="services.renewable_energy">Renewable energy</a></h5>
                             </div>
                         </div>
                     </div>
@@ -92,7 +131,7 @@
                                 <img src="assets/img/gallery/international-exchange.png" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="#" data-i18n="services.protect_animals">Protect animals</a></h5>
+                                <h5><a href="#modal-exchange" class="popup-modal" data-i18n="services.protect_animals">Protect animals</a></h5>
                             </div>
                         </div>
                     </div>
@@ -100,41 +139,23 @@
             </div>
         </div>
         <!-- Services Area End -->
-        <!--? About Area Start -->
-        <section class="support-company-area fix pb-padding">
-            <div class="support-wrapper align-items-center">
-                <div class="left-content">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-30">
-                        <span>Why You Should join us</span>
-                        <h2>A lot of animals need protection</h2>
-                    </div>
-                    <div class="support-caption">
-                        <p class="pera-top">Interdum nulla, ut commodo diam libero vitae erat. 
-                            Aenean faucibus nibh et justo cursus id rutrum lorem 
-                        imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-                        <a href="#" class="border-btn">Join Us Now</a>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="assets/img/gallery/safe_in.png" alt="">
-                    </div>
-                    <div class="support-img-cap text-center d-flex">
-                        <div class="single-one">
-                            <span>950</span>
-                            <p>Poaching cases</p>
-                        </div>
-                        <div class="single-two">
-                            <span>230</span>
-                            <p>Volunteers worldwide</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Area End -->
+
+        <!-- 詳細説明用モーダルの中身 (初期状態は非表示) -->
+        <div id="modal-unplugged" class="white-popup-block mfp-hide">
+            <h3 data-i18n="services.clean_water">Unplugged ICT Education</h3>
+            <p>ここにアンプラグドICT教育の詳細な説明文が入ります。PCを使わずに情報科学の基礎を学ぶ手法です。</p>
+            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+        </div>
+        <div id="modal-teacher" class="white-popup-block mfp-hide">
+            <h3 data-i18n="services.renewable_energy">Teacher Training</h3>
+            <p>ここに教員研修の詳細な説明文が入ります。現地の先生方への指導方法のレクチャーなどを行っています。</p>
+            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+        </div>
+        <div id="modal-exchange" class="white-popup-block mfp-hide">
+            <h3 data-i18n="services.protect_animals">International Exchange</h3>
+            <p>ここに国際交流の詳細な説明文が入ります。日本と現地の子供たちを繋ぐ活動です。</p>
+            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+        </div>
     </main>
     <footer>
         <div class="footer-wrapper">
@@ -270,6 +291,20 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <!-- モーダル動作用スクリプト -->
+    <script>
+        $(document).ready(function() {
+            $('.popup-modal').magnificPopup({
+                type: 'inline',
+                preloader: false
+            });
+            $(document).on('click', '.popup-modal-dismiss', function (e) {
+                e.preventDefault();
+                $.magnificPopup.close();
+            });
+        });
+    </script>
     
 </body>
 </html>

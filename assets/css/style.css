@@ -39,3 +39,8 @@
         height: 500px;
     }
 }
+
+/* Blog Areaの背景色 */
+.home-blog-area {
+    background: #EEFFFA;
+}
