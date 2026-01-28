@@ -47,6 +47,20 @@
           menu.slicknav('close');
         }
       });
+
+      // スマートフォンで上スクロール時にメニューを閉じる
+      var lastScrollTop = 0;
+      $(window).on('scroll', function() {
+        var currentScroll = $(this).scrollTop();
+        // モバイル（767px以下）のみ適用
+        if ($(window).width() <= 767) {
+          // 上スクロール時（スクロール位置が減少）
+          if (currentScroll < lastScrollTop) {
+            menu.slicknav('close');
+          }
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }
+      });
     };
 
 
