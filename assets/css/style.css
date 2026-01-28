@@ -29,3 +29,13 @@
     border-bottom: 5px solid #6fd66c; /* 下の線 */
     border-left: 5px solid #6fd66c;   /* 左の線 */
 }
+
+/* visit_bgの高さ調整（コンパイル環境がないためここに追記） */
+.visit-tailor-area .tailor-offers {
+    height: 600px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .visit-tailor-area .tailor-offers {
+        height: 500px;
+    }
+}
