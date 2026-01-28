@@ -53,7 +53,7 @@ const footerHTML = `
                        </div>
                    </div>
                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
-                       <div class="single-footer-caption mb-50">
+                       <div class="single-footer-caption mb-10">
                            <div class="footer-tittle">
                                <h4 data-i18n="footer.contact">Contact us</h4>
                                <ul>
