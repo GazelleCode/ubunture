@@ -29,11 +29,26 @@
         .white-popup-block {
             background: #FFF;
             padding: 40px;
+            padding-bottom: 20px;
             text-align: left;
             max-width: 650px;
             margin: 40px auto;
             position: relative;
             border-radius: 5px;
+        }
+        .white-popup-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        .white-popup-block p {
+            margin-bottom: 10px;
+        }
+        .white-popup-block h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -142,19 +157,22 @@
 
         <!-- 詳細説明用モーダルの中身 (初期状態は非表示) -->
         <div id="modal-unplugged" class="white-popup-block mfp-hide">
-            <h3 data-i18n="services.clean_water">Unplugged ICT Education</h3>
-            <p>ここにアンプラグドICT教育の詳細な説明文が入ります。PCを使わずに情報科学の基礎を学ぶ手法です。</p>
-            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+            <h3 data-i18n="modal.unplugged_title">Unplugged ICT Education</h3>
+            <img src="assets/img/gallery/unplugged_education.png" alt="">
+            <p data-i18n="modal.unplugged_desc">ここにアンプラグドICT教育の詳細な説明文が入ります。PCを使わずに情報科学の基礎を学ぶ手法です。</p>
+            <p><a class="popup-modal-dismiss" href="#" data-i18n="modal.close">閉じる</a></p>
         </div>
         <div id="modal-teacher" class="white-popup-block mfp-hide">
-            <h3 data-i18n="services.renewable_energy">Teacher Training</h3>
-            <p>ここに教員研修の詳細な説明文が入ります。現地の先生方への指導方法のレクチャーなどを行っています。</p>
-            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+            <h3 data-i18n="modal.teacher_title">Teacher Training</h3>
+            <img src="assets/img/gallery/teacher-training.png" alt="">
+            <p data-i18n="modal.teacher_desc">ここに教員研修の詳細な説明文が入ります。現地の先生方への指導方法のレクチャーなどを行っています。</p>
+            <p><a class="popup-modal-dismiss" href="#" data-i18n="modal.close">閉じる</a></p>
         </div>
         <div id="modal-exchange" class="white-popup-block mfp-hide">
-            <h3 data-i18n="services.protect_animals">International Exchange</h3>
-            <p>ここに国際交流の詳細な説明文が入ります。日本と現地の子供たちを繋ぐ活動です。</p>
-            <p><a class="popup-modal-dismiss" href="#">閉じる</a></p>
+            <h3 data-i18n="modal.exchange_title">International Exchange</h3>
+            <img src="assets/img/gallery/international-exchange.png" alt="">
+            <p data-i18n="modal.exchange_desc">ここに国際交流の詳細な説明文が入ります。日本と現地の子供たちを繋ぐ活動です。</p>
+            <p><a class="popup-modal-dismiss" href="#" data-i18n="modal.close">閉じる</a></p>
         </div>
     </main>
     <footer>
