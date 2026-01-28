@@ -45,13 +45,6 @@
     background: #EEFFFA;
 }
 
-/* スマホ表示でAbout Usセクション（support-company-area）のボタンとテキストを中央揃えにする */
-@media (max-width: 767px) {
-    .support-company-area .support-wrapper .left-content .support-caption {
-        text-align: center;
-    }
-}
-
 /* ヘッダーのすりガラス（透明・屈折）効果 */
 .header-glass .main-header {
     background: rgba(255, 255, 255, 0.1); /* 半透明の白 */
