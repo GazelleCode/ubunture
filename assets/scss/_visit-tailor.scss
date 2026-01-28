@@ -102,10 +102,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 990px;
+        height: 600px;
         width: 55%;
          @media #{$lg}{
-            height: 769px;
+            height: 500px;
             width: 61%;
         }
          @media #{$xs}{
@@ -126,5 +126,3 @@
 }
 
 // Progress Bar
-
-
