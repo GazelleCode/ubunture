@@ -40,6 +40,13 @@
         closedSymbol: '+',
         openedSymbol:'-'
       });
+
+      // ハンバーガーメニュー外をクリックした時に閉じる
+      $(document).on('click', function(e) {
+        if (!$(e.target).closest('.slicknav_menu').length) {
+          menu.slicknav('close');
+        }
+      });
     };
 
 

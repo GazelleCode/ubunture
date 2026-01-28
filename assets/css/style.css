@@ -44,3 +44,10 @@
 .home-blog-area {
     background: #EEFFFA;
 }
+
+/* スマホ表示でAbout Usセクション（support-company-area）のボタンとテキストを中央揃えにする */
+@media (max-width: 767px) {
+    .support-company-area .support-wrapper .left-content .support-caption {
+        text-align: center;
+    }
+}
