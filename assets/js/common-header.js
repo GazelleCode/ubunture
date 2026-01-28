@@ -1,4 +1,20 @@
 // c:\Users\ntksh\mycodes\ubuntureSite\assets\js\common-header.js
+// Google Analytics (GA4) の設定
+(function() {
+    // ★ここにあなたの測定ID (例: G-1234567890) を入力してください
+    var gaId = 'G-83F25BDQJG';
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaId);
+})();
+
 const headerHTML = `
     <div class="header-area">
         <div class="main-header ">
