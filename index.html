@@ -40,37 +40,21 @@
             }
             /* モバイル向け全画面スクロール設定 */
             html {
-                scroll-snap-type: y mandatory;
+                scroll-snap-type: y proximity;
                 scroll-behavior: smooth;
             }
-            /* 細かい要素ごとのスナップ設定 */
+            /* 主要セクションのスナップ設定（最上位要素のみ） */
             .slider-area, 
             .visit-tailor-area, 
             .support-company-area, 
-            .our-cases-area .section-tittle, /* 活動紹介のタイトル */
-            .single-cases,                   /* 活動紹介の各カード */
-            .home-blog-area .section-tittle, /* ブログのタイトル */
-            .home-blog-single,               /* ブログの各記事 */
-            .our-cases-area .d-flex.justify-content-center, /* 活動紹介下のボタン */
+            .our-cases-area,
+            .home-blog-area,
             footer {
                 scroll-snap-align: start;
                 scroll-snap-stop: always;
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
             }
-            /* コンテナ自体の余白をリセットしてアイテム間の隙間をなくす */
-            .our-cases-area, .home-blog-area {
-                padding-top: 0 !important;
-                padding-bottom: 0 !important;
-            }
-            /* 各アイテムの既存マージンをリセット */
-            .single-cases, .home-blog-single {
-                margin-bottom: 0 !important;
-            }
+            /* スライダーのみ100vh強制 */
             .slider-area, .slider-height {
-                height: 100vh !important;
                 min-height: 100vh !important;
             }
         }
