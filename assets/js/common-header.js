@@ -32,7 +32,7 @@ const headerHTML = `
                                     <nav>
                                         <ul id="navigation">                                                                                          
                                             <li>
-                                                <button id="lang-btn" onclick="toggleLanguage()" class="btn lang-switch-btn" style="padding: 10px 20px; min-width: 60px; height: auto; line-height: 1; margin-left: 10px;">JP</button>
+                                                <a href="#" id="lang-btn" onclick="toggleLanguage(); return false;" class="btn lang-switch-btn" style="padding: 10px 20px; min-width: 60px; height: auto; line-height: 1; margin-left: 10px;">JP</a>
                                             </li>
                                             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
                                             <li><a href="about.html" data-i18n="nav.about">About</a></li>
@@ -45,6 +45,7 @@ const headerHTML = `
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                                            <li class="d-lg-none"><a href="contact.html" data-i18n="header.donation">Make a Donation</a></li>
                                         </ul>
                                     </nav>
                                 </div>
