@@ -44,6 +44,8 @@
         $('#back-top').fadeIn(500);
       }
     });
+    // 初期ロード時にヘッダーの状態（半透明）を適用するため、スクロールイベントを一度発火させる
+    $(document).ready(function(){ $(window).trigger('scroll'); });
 
   // Scroll Up
     $('#back-top a').on("click", function () {
