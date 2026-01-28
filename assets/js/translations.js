@@ -136,7 +136,17 @@ const translations = {
     "modal.teacher_desc": "Although we did not conduct specific training programs for local teachers during this trip, through field surveys and interviews with experts, the lack of instructors and skills was recognized as a clear issue and one of the biggest barriers to promoting ICT education. In dialogue with Professor Jansen of Stellenbosch University, the challenges of public education in South Africa were discussed in comparison with cases of teacher training dissemination in neighboring countries. Based on this current situation, as a future prospect, we aim to shift from a format where Japanese students conduct classes alone to a system where we develop and operate programs jointly with local university students and educators, allowing the local side to continue education autonomously.",
     "modal.exchange_title": "International Exchange",
     "modal.exchange_desc": "We incorporated 'Cultural Exchange' into the class curriculum and conducted activities that fused cultural experience with learning logical thinking. Specifically, we performed the Japanese 'Soran Bushi' and the local dance music 'Amapiano', understanding their choreography as the concept of 'conditional branching' in programming. Also, outside of class, members interacted with local children during lunch and break times, touching on each other's cultures and backgrounds, providing an opportunity for equal mutual understanding beyond the relationship of supporter and supported.",
-    "modal.close": "Close"
+    "modal.close": "Close",
+    "contact.page_title": "Contact",
+    "contact.get_in_touch": "Get in Touch",
+    "contact.form.message_placeholder": "Enter Message",
+    "contact.form.name_placeholder": "Enter your name",
+    "contact.form.email_placeholder": "Email",
+    "contact.form.subject_placeholder": "Enter Subject",
+    "contact.form.send_button": "Send",
+    "contact.address.zip": "153-8902",
+    "contact.address.line1": "3-8-1 Komaba, Meguro-ku, Tokyo",
+    "contact.email.desc": "Representative: Daichi Sawachika"
   },
   
 // 日本語
@@ -280,6 +290,16 @@ const translations = {
     "modal.exchange_title": "国際交流",
     "modal.exchange_desc": "授業カリキュラムの中に「Cultural Exchange」を組み込み、文化体験と論理的思考の学習を融合させた活動を行いました。具体的には、日本の「ソーラン節」と現地のダンス音楽「アマピアノ」を踊りながら、その振付をプログラミングの「条件分岐」の概念として理解する活動を行いました。また、授業外でも給食の時間や休み時間に現地の子供たちと渡航メンバーが交流し、互いの文化や背景に触れ合うことで、支援する側・される側という関係を超えた対等な相互理解の機会となりました。",
     "modal.close": "閉じる",
+    "contact.page_title": "お問い合わせ",
+    "contact.get_in_touch": "お問い合わせ",
+    "contact.form.message_placeholder": "メッセージを入力",
+    "contact.form.name_placeholder": "お名前を入力",
+    "contact.form.email_placeholder": "メールアドレス",
+    "contact.form.subject_placeholder": "件名を入力",
+    "contact.form.send_button": "送信",
+    "contact.address.zip": "〒153-8902",
+    "contact.address.line1": "東京都目黒区駒場３丁目８−１",
+    "contact.email.desc": "代表：澤近大地"
   }
   // (例) 将来フランス語を足す場合、ここに追加するだけでOK
   // fr: {
