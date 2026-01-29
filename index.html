@@ -47,6 +47,19 @@
                 height: 100vh !important;
                 min-height: 100vh !important;
             }
+            /* ハンバーガーメニューのアニメーション */
+            .slicknav_btn .slicknav_icon-bar {
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+            .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(2) {
+                opacity: 0;
+            }
+            .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
         }
     </style>
 </head>
