@@ -31,9 +31,11 @@
         if (scroll < 100) {
           $("#common-header").addClass("header-glass").removeClass("header-white");
           $("#common-header").css("transform", "translateY(0)");
+          $("#round-mobile-btn").fadeOut();
         } else {
           $("#common-header").removeClass("header-glass").removeClass("header-white");
           $("#common-header").css("transform", "translateY(-100%)");
+          $("#round-mobile-btn").fadeIn();
         }
       }
 
@@ -63,7 +65,41 @@
       menu.slicknav({
         prependTo: ".mobile_menu",
         closedSymbol: '+',
-        openedSymbol:'-'
+        openedSymbol:'-',
+        beforeClose: function() {
+          $('#round-mobile-btn').removeClass('active');
+        },
+        afterClose: function() {
+          var $slickNav = $('.slicknav_menu');
+          if ($slickNav.hasClass('detached-menu')) {
+            $slickNav.removeClass('detached-menu').prependTo('.mobile_menu');
+            $slickNav.attr('style', ''); // Clear inline styles
+            $slickNav.find('.slicknav_btn').show();
+          }
+        }
+      });
+
+      // 丸いボタンをクリックした時の処理
+      $('#round-mobile-btn').on('click', function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('active')) {
+          menu.slicknav('close');
+        } else {
+          $(this).addClass('active');
+          var $slickNav = $('.slicknav_menu');
+          $slickNav.addClass('detached-menu').appendTo('body');
+          $slickNav.css({
+              'position': 'fixed',
+              'top': '0',
+              'left': '0',
+              'width': '100%',
+              'z-index': '9999',
+              'background': 'rgba(255, 255, 255, 0.98)',
+              'padding-top': '60px'
+          });
+          $slickNav.find('.slicknav_btn').hide();
+          menu.slicknav('open');
+        }
       });
 
       // ハンバーガーメニュー外をクリックした時に閉じる

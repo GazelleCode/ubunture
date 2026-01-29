@@ -67,6 +67,56 @@ const headerHTML = `
 // IDが 'common-header' の要素の中にHTMLを挿入
 document.getElementById('common-header').innerHTML = headerHTML;
 
+// 丸いボタンをbodyに直接追加（ヘッダーのtransformの影響を受けないようにするため）
+const mobileBtnHTML = `
+    <button id="round-mobile-btn" class="round-mobile-btn" aria-label="Menu" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <style>
+        .round-mobile-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            border: none;
+            z-index: 10000; /* ヘッダーより手前に表示 */
+            display: flex; /* Flexboxで中央揃え */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            padding: 0;
+        }
+        .round-mobile-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        .round-mobile-btn.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .round-mobile-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .round-mobile-btn.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        @media (min-width: 992px) {
+            .round-mobile-btn { display: none !important; }
+        }
+    </style>
+`;
+document.body.insertAdjacentHTML('beforeend', mobileBtnHTML);
+
 // 翻訳スクリプトを動的に読み込む関数
 function loadScript(src, callback) {
     var script = document.createElement('script');
