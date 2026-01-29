@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;                /* 横線の長さ */
+    width: 80px;                 /* 横線の長さ */
     height: 40px;                /* 縦線の長さ */
     border-top: 5px solid #48c1b9;    /* 上の線 */
     border-right: 5px solid #48c1b9;  /* 右の線 */
