@@ -17,6 +17,22 @@ jobs:
 
       - name: Push to Account B
         run: |
-          # アカウントBのURLを設定（ユーザー名とリポジトリ名は適宜書き換え）
+          # 1. デバッグ: シークレットが読み込めているか確認
+          # (セキュリティのため中身は表示されませんが、空かどうかが分かります)
+          if [ -z "${{ secrets.EXTERNAL_REPO_TOKEN }}" ]; then
+            echo "❌ エラー: EXTERNAL_REPO_TOKEN が空です！読み込めていません。"
+            exit 1
+          else
+            echo "✅ シークレットは空ではありません。読み込みに成功しました。"
+          fi
+
+          # 2. ユーザー名とメールアドレスを設定（これをしないとエラーになることがあります）
+          git config --global user.name "GazelleCode"
+          git config --global user.email "your-email@example.com"
+
+          # 3. URLの形式を変更（最も確実な形式）
+          # ユーザー名を指定せず、トークンを直接認証に使います
           REMOTE_REPO="https://${{ secrets.EXTERNAL_REPO_TOKEN }}@github.com/ubunture/site2.git"
+          
+          # 4. プッシュ実行
           git push --force "$REMOTE_REPO" main
