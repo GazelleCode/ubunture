@@ -18,9 +18,7 @@ const footerHTML = `
                                </div>
                                <!-- social -->
                                <div class="footer-social">
-                                   <a href="#"><i class="fab fa-twitter"></i></a>
-                                   <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                   <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                   <a href="https://www.instagram.com/ubunture/"><i class="fab fa-instagram"></i></a>
                                </div>
                            </div>
                        </div>
@@ -30,11 +28,11 @@ const footerHTML = `
                            <div class="footer-tittle">
                                <h4 data-i18n="footer.solutions">Our solutions</h4>
                                <ul>
-                                   <li><a href="#" data-i18n="footer.sol_design">Design & creatives</a></li>
-                                   <li><a href="#" data-i18n="footer.sol_telecom">Telecommunication</a></li>
-                                   <li><a href="#" data-i18n="footer.sol_restaurant">Restaurant</a></li>
-                                   <li><a href="#" data-i18n="footer.sol_programming">Programing</a></li>
-                                   <li><a href="#" data-i18n="footer.sol_architecture">Architecture</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.sol_design">Design & creatives</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.sol_telecom">Telecommunication</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.sol_restaurant">Restaurant</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.sol_programming">Programing</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.sol_architecture">Architecture</a></li>
                                </ul>
                            </div>
                        </div>
@@ -44,10 +42,10 @@ const footerHTML = `
                            <div class="footer-tittle">
                                <h4 data-i18n="footer.company">Company</h4>
                                <ul>
-                                   <li><a href="#" data-i18n="footer.comp_about">About</a></li>
-                                   <li><a href="#" data-i18n="footer.comp_review">Review</a></li>
-                                   <li><a href="#" data-i18n="footer.comp_insights">Insights</a></li>
-                                   <li><a href="#" data-i18n="footer.comp_carrier">Carrier</a></li>
+                                   <li><a href="about.html" data-i18n="footer.comp_about">About</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.comp_review">Review</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.comp_insights">Insights</a></li>
+                                   <li><a href="coming-soon.html" data-i18n="footer.comp_carrier">Carrier</a></li>
                                </ul>
                            </div>
                        </div>
