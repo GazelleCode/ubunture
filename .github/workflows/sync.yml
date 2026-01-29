@@ -1,1 +1,22 @@
 
+name: Sync to Account B
+
+on:
+  push:
+    branches:
+      - main  # 同期したいブランチ名
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Push to Account B
+        run: |
+          # アカウントBのURLを設定（ユーザー名とリポジトリ名は適宜書き換え）
+          REMOTE_REPO="https://${{ secrets.EXTERNAL_REPO_TOKEN }}@github.com/ubunture.github.io/site2.git"
+          git push --force "$REMOTE_REPO" main
