@@ -18,5 +18,5 @@ jobs:
       - name: Push to Account B
         run: |
           # アカウントBのURLを設定（ユーザー名とリポジトリ名は適宜書き換え）
-          REMOTE_REPO="https://token:${{ secrets.EXTERNAL_REPO_TOKEN }}@github.com/ubunture/site2.git"
+          REMOTE_REPO="https://${{ secrets.EXTERNAL_REPO_TOKEN }}@github.com/ubunture/site2.git"
           git push --force "$REMOTE_REPO" main
